@@ -51,7 +51,7 @@ PHP
 
   # Install into DB
   echo 'Installing WordPress...\n'
-  wp core install --url=local.woocommerce.dev --title='WooCommerce' --admin_user=admin --admin_password=password --admin_email=changme@changeme.com --allow-root
+  wp core install --url=local.woocommerce.test --title='WooCommerce' --admin_user=admin --admin_password=password --admin_email=changme@changeme.com --allow-root
 
   # Update Blog Description option
   echo 'Updating tagline...\n'
@@ -100,7 +100,7 @@ PHP
   wp menu location assign primary-menu primary --allow-root
 
   echo "Adding basic menu items to the Primary Menu..."
-  wp menu item add-custom primary-menu Home http://local.woocommerce.dev/ --allow-root
+  wp menu item add-custom primary-menu Home http://local.woocommerce.test/ --allow-root
   wp menu item add-post primary-menu 4 --title='Blog' --allow-root
 
   # **
@@ -160,7 +160,7 @@ PHP
 
   # Replace any urls from the WordPress unit data
   echo 'Adjusting urls in database...\n'
-  wp search-replace 'wpthemetestdata.wordpress.com' 'local.woocommerce.dev' --skip-columns=guid --allow-root
+  wp search-replace 'wpthemetestdata.wordpress.com' 'local.woocommerce.test' --skip-columns=guid --allow-root
 
   # Update the sites permalink structure
   echo 'Update permalink structure...\n'
